@@ -1,0 +1,36 @@
+
+class Ball {
+    constructor(canvas, context, x, y, deltaX, deltaY) {
+        this.canvas = canvas;
+        this.context = context;
+        this.x = x;
+        this.y = y;
+        this.deltaX = deltaX;
+        this.deltaY = deltaY;
+        this.img = this.init_img();
+    }
+
+    init_img() {
+        var nimg = new Image();
+        nimg.src = DEFINE.SRC_IMG;
+        nimg.height = DEFINE.SIZE;
+        nimg.width = DEFINE.SIZE;
+
+        return nimg;
+    }
+
+    draw() {
+        this.context.drawImage(this.img, this.x, this.y); 
+    }
+
+    move() {
+        if(this.x + this.deltaX < 0 || this.x + this.deltaX > this.canvas.width - DEFINE.SIZE)
+            this.deltaX = -this.deltaX;
+        if(this.y + this.deltaY < 0 || this.y + this.deltaY > this.canvas.height - DEFINE.SIZE)
+            this.deltaY = -this.deltaY;
+
+        this.x += this.deltaX;
+        this.y += this.deltaY;
+    }
+
+}
