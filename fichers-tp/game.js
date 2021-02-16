@@ -6,8 +6,11 @@ var raf = null;
 var animation = null;
 
 function init() {
-    animation = new Animation(myCanvas, context);
-
+    animation = new AnimationWithObstacle(myCanvas, context, new Obstacle(100,200,10,200));
+    
+    window.addEventListener('keydown', animation.keyDownActionHandler.bind(animation));
+    window.addEventListener('keyup', animation.keyUpActionHandler.bind(animation));
+    
     update();
 }
 
@@ -31,5 +34,8 @@ function animationButton() {
     
 }
 
-init();
+function addBall() {
+    animation.addBall();
+}
 
+init();
