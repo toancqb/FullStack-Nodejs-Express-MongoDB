@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Link of FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+          integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    <title>Rock, Paper, Scissors</title>
+
+</head>
+<body>
+<main>
+    <div class="rules">
+        <button id="rules-btn" class="btn-primary">Rules</button>
+    </div>
+
+    <section class="introduction">
+        <span class="introduction-title">Let's play rock-paper-scissor &nbsp;</span>
+        <a href="/bot/pfc">
+            <button class="btn btn-primary" style="text-decoration: line-through">Play with Bot</button>
+        </a>
+        <a href="/pfc">
+            <button class="btn btn-primary">Play online!</button>
+        </a>
+        <a href="/about">
+            <button class="btn btn-primary">About</button>
+        </a>
+    </section>
+
+
+    <section id="rules-overview">
+        <div class="card">
+            <p class="rules-title">Rules</p>
+            <button class="exitFromRules"><i class="fas fa-times fa-lg"></i></button>
+            <figure class="rules-description">
+                <img src="images/image-rules.svg" alt="">
+            </figure>
+
+        </div>
+    </section>
+
+    <script src="/scripts/main.js"></script>
+</main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Starship game</title>
+    <meta name="author" content="JC Routier"/>
+    <meta name="keywords" content="animation"/>
+
+
+    <link rel="stylesheet" type="text/css" href="style/style.css" title="starship style"/>
+
+    <!-- pas de script => ajouté par webpack -->
+
+<script defer src="./dist/bundle.js?555ec14434c865efae1e"></script><script defer src="./dist/bundle.js?606427fdecb1a7b9629f"></script><script defer src="./dist/bundle.js?23761a5f265404c59d19"></script></head>
+
+<body>
+
+<h2 id="lifeLeftText">You have <span id="lifeLeft">5</span> life left</h2>
+
+<canvas id="stars" width="1000" height="400" tabindex="1">
+</canvas>
+
+<div class="description-wrapper">
+    <div class="game-rules">
+        <h2>Rules</h2>
+        <ul>
+            <li>Up arrow for moving higher</li>
+            <li>Down arrow for moving lower</li>
+            <li>Space for shooting</li>
+            <li>200 points for each saucer shoot</li>
+            <li>1000 points lost for each saucer passed the line</li>
+        </ul>
+    </div>
+
+    <div id="control">
+        <button id="nouvelleSoucoupe"><span>1</span> <img src="images/flyingSaucer-petit.png" width="48"
+                                                          alt="nouvelle soucoupe volante"/></button>
+        <button id="flotteSoucoupes"><span>&#8734;</span> <img src="images/flyingSaucer-petit.png" width="48"
+                                                               alt="nouvelle soucoupe volante"/></button>
+        score : <span id="score"> 0 </span>
+    </div>
+</div>
+
+
+</body>
+
+</html>
